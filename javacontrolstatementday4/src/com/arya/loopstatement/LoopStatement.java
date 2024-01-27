@@ -38,4 +38,6 @@ public class LoopStatement {
 		for(boolean booleanVariable:booleanArray)
 			System.out.println(booleanVariable);
 	}
+	
+	
 }
