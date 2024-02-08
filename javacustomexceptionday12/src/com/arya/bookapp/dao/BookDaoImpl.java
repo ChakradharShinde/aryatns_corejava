@@ -4,10 +4,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.ObjectInput;
-import java.io.ObjectInputFilter;
 import java.io.ObjectInputStream;
-import java.io.ObjectOutput;
 import java.io.ObjectOutputStream;
 
 import com.arya.bookapp.entities.Book;
@@ -24,6 +21,7 @@ public class BookDaoImpl implements BookDao{
 					= new ObjectOutputStream(fileOut)
 			)
 		{
+			// Serialization
 			objectOutput.writeObject(books);
 			
 		}
@@ -41,6 +39,7 @@ public class BookDaoImpl implements BookDao{
 				ObjectInputStream objectIn = 
 						new ObjectInputStream(fileIn);
 		){
+			// Desrialization
 			books = (Book[])objectIn.readObject();
 		}
 		
