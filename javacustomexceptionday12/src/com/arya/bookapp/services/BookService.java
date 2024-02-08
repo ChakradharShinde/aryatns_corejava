@@ -4,13 +4,15 @@ public interface BookService {
 
 	int printMenu();
 	
-	void insertRecord(int index);
+	void insertRecord();
 	
 	void deleteRecord();
 	
 	void updateRecord();
 	
-	void printRecord(int id);
+	void printRecord();
 	
 	void printAllRecord();
+	
+	void saveBooks();
 }
