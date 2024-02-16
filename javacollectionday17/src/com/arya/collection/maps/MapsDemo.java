@@ -34,17 +34,17 @@ public class MapsDemo {
 		phoneBook.put(2408976547l, "Ankit");
 		phoneBook.put(2408976548l, "Devendra");
 		phoneBook.put(2408976548l, "Sachin");
-		phoneBook.put(null, null);
+//		phoneBook.put(null, null);
 		
 		System.out.println(phoneBook);
 		
 		boolean isPresent = phoneBook.containsKey(2408976549l);
 		System.out.println(isPresent);
 		
-		List<HashMap<Long, String>> hashMapList = new ArrayList<HashMap<Long, String>>();
-		hashMapList.add(phoneBook);
-//		Collections.sort(hashMapList);
-//		System.out.println(hashMapList);
+		List<Map.Entry<Long, String>> hashMapList = new ArrayList<>(phoneBook.entrySet());
+//		hashMapList.add(phoneBook);
+		Collections.sort(hashMapList, (e1, e2)->e1.getValue().compareTo(e2.getValue()));
+		System.out.println(hashMapList);
 		
 		
 		
