@@ -100,11 +100,14 @@ public class App {
 		
 		System.out.println(Arrays.toString(emplArrayStartingCharD));
 		
-		//primitive array pending
-//		int[] evenAgeArray=employeeList.stream().map(e->e.getAge()).toArray(Integer[]::new);
-//		System.out.println(evenAgeArray);
+		//primitive array pending (MapToInt)
+		int[] evenAgeArray=employeeList.stream().mapToInt(e->e.getAge()).toArray();
+		System.out.println(evenAgeArray);
+		
+		
 		//collect
 		//toList
+	
 		List<Employee> employeeListOfEvenAge=employeeList.stream().filter(e->e.getAge()%2==0).collect(Collectors.toList());
 		System.out.println(employeeListOfEvenAge);
 		
